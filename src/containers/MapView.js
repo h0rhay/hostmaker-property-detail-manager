@@ -3,6 +3,7 @@ import { Map, GoogleApiWrapper } from 'google-maps-react'
 import MapComponent from '../components/map/MapComponent'
 
 const GapiKey = 'AIzaSyAA80aJ88fiRYBkzyRYMNudLQmbsIM7jfI'
+const window = {}
 
 export class MapContainer extends React.Component {
   render () {
@@ -12,11 +13,13 @@ export class MapContainer extends React.Component {
     }
 
     return (
-      <MapComponent
-        google={this.props.google}
-        style={style}
-        onClick={this.onMapClicked}
-      />
+      typeof window !== 'undefined' && (
+        <MapComponent
+          google={this.props.google}
+          style={style}
+          onClick={this.onMapClicked}
+        />
+      )
     )
   }
 }

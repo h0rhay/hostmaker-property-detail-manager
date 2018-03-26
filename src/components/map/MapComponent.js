@@ -2,10 +2,23 @@ import React from 'react'
 
 import { Map } from 'google-maps-react'
 import Marker from './Marker'
+import Circle from './Circle'
 
 export class MapComponent extends React.Component {
   render () {
-    
+    const circlePos = {
+      lat: '51.5073835',
+      lng: ' -0.1277801',
+    }
+    const circleOptions = {
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.5,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      radius: 20000,
+      position: circlePos,
+    }
     return (
       <div>
         { this.props.loaded
@@ -20,6 +33,7 @@ export class MapComponent extends React.Component {
               lat: 51.5073835,
               lng: -0.1277801,
             }}>
+            <Circle options={circleOptions} />
             <Marker
               title={'7 Westbourne Terrace, W2 3UL'}
               name={'Carlos'}
