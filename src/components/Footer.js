@@ -8,7 +8,7 @@ const AppStyles = styled.div`
     width: calc(100% - ${props => props.theme.GutterSpace * 2}em);
     position:fixed;
     bottom:0;
-    padding: ${props => props.theme.GutterSpace}em;
+    padding: ${props => props.theme.GutterSpace / 2}em ${props => props.theme.GutterSpace}em;
     background: ${props => props.theme.BrandPrimary};
     color: ${props => props.theme.White};
     border-top: 1px solid ${props => props.theme.BrandPrimaryMid};

@@ -27,11 +27,14 @@ const AppStyles = styled.div`
     a {
       color: ${props => props.theme.BrandPrimary};
       padding: ${props => props.theme.GutterSpace / 2}em ${props => props.theme.GutterSpace}em;
-      display: inline-block;
+      display: block;
       text-transform:uppercase;
       text-decoration:none;
       & :hover {
         background: ${props => props.theme.MidGrey};
+      }
+      @media screen and (min-width: ${props => props.theme.SmallScreen}) {
+        display: inline-block;
       }
     }
   }
