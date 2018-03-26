@@ -9,7 +9,7 @@ const AppStyles = styled.div`
   }
   
   .columns {
-    display: flex;
+    display: block;
   }
 
   .column {
@@ -30,6 +30,7 @@ const AppStyles = styled.div`
 
   @media screen and (min-width: ${props => props.theme.SmallScreen}) {
     .columns {
+      display:flex;
       flex-direction: row;
     }
   }
